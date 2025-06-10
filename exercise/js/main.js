@@ -1,6 +1,6 @@
 console.log("...fetching a random cocktail 🍹");
 
-// prepare dom elements
+
 const titleContainer = document.querySelector("[data-js='title']");
 const imgContainer = document.querySelector("[data-js='photo']");
 const ingredientsList = document.querySelector(".ingredients");
@@ -30,10 +30,10 @@ function updateLikeButton(drinkId) {
   
   if (isFav) {
     likeButton.classList.add('liked');
-    icon.style.fontVariationSettings = "'FILL' 1"; // заповнене серце
+    icon.style.fontVariationSettings = "'FILL' 1"; 
   } else {
     likeButton.classList.remove('liked');
-    icon.style.fontVariationSettings = "'FILL' 0"; // незаповнене серце
+    icon.style.fontVariationSettings = "'FILL' 0"; 
   }
 }
 
