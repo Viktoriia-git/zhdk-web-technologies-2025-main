@@ -1,0 +1,140 @@
+/** 
+ * A very basic CSS reset:
+ * More about CSS resets: https://meyerweb.com/eric/tools/css/reset/
+ */
+:root {
+  --background-color: #0F1014;
+  --card-text: #E3DBCF;
+  --border-color: #BAB1A5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background:var(--background-color);
+}
+
+h1 {
+  font-family: 'Savate', sans-serif;
+  font-size: 44px;
+  line-height: 60px;
+}
+
+h2 {
+  font-family: 'Savate', sans-serif; 
+   font-size: 24px;
+   line-height: 32px;
+}
+
+h1, h2 {
+  line-height: normal;
+  color: var(--card-text);
+}
+
+.glass-info {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+ul.ingredients li{
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: var(--card-text);
+  margin-right: 8px;
+}
+
+ul.ingredients li:not(:last-child)::after{
+  content: "|";
+  margin-left: 8px;
+  color: var(--border-color);
+}
+
+.card {
+  width: 360px;
+  height: 610px;
+  margin: 124px auto 0 auto;
+  position: relative;
+  color: var(--card-text);
+  border-radius: 16px;
+  overflow: visible;
+}
+
+.card .drink-description{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 12px;
+  gap: 12px;
+    border: 1px solid var(--border-color);
+  border-radius: 16px;
+}
+
+/** 
+ * Just some styling to make the card visible.
+ * Feel free to change this!
+ */
+
+
+
+.main-image img {
+  width: 100%;
+  display: block;
+  position: relative;
+  border: 1px solid var(--border-color); 
+  border-radius: 16px;
+
+  -webkit-mask-image: url("assets/mask.svg"); 
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+
+  mask-image: url("assets/mask.svg");
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  object-fit: cover;
+}
+
+
+.like-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid var(--border-color);
+  padding: 14px 14px 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.like-button .material-symbols-outlined {
+  color: var(--card-text);
+  transition: all 0.3s ease;
+}
+
+.like-button.liked .material-symbols-outlined {
+  color: #fff;
+}
+
+.favorites-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
