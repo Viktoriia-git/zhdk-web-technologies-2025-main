@@ -1,4 +1,4 @@
-// Додаємо функцію removeFavorite
+
 function removeFavorite(drinkId) {
   let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
   favorites = favorites.filter(drink => drink.idDrink !== drinkId);
@@ -32,12 +32,12 @@ function displayFavorites() {
     </div>
   `).join('');
 
-  // Додаємо обробники кліків для кнопок лайків
+  
   document.querySelectorAll('.like-button').forEach(button => {
     button.addEventListener('click', () => {
       const drinkId = button.dataset.id;
       removeFavorite(drinkId);
-      displayFavorites(); // Оновлюємо відображення після видалення
+      displayFavorites(); 
     });
   });
 }
@@ -54,5 +54,5 @@ function getIngredientsList(drink) {
   return ingredients;
 }
 
-// Відображаємо улюблені при завантаженні сторінки
+
 document.addEventListener('DOMContentLoaded', displayFavorites); 
