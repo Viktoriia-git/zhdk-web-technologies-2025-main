@@ -1,5 +1,9 @@
 console.log("...fetching a random cocktail 🍹");
 
+let currentIndex = 0;
+let drinks = [];
+
+
 
 const titleContainer = document.querySelector("[data-js='title']");
 const imgContainer = document.querySelector("[data-js='photo']");
