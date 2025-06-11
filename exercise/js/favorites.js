@@ -15,7 +15,7 @@ function displayFavorites() {
   }
 
   favoritesGrid.innerHTML = favorites.map(drink => `
-    <div class="card">
+    <div class="card favorite-card">
       <div class="main-image">
         <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}">
         <button class="like-button liked" data-id="${drink.idDrink}">
@@ -23,11 +23,11 @@ function displayFavorites() {
         </button>
       </div>
       <div class="drink-description">
-        <h1>${drink.strDrink}</h1>
+        <h2>${drink.strDrink}</h2>
         <ul class="ingredients">
           ${getIngredientsList(drink)}
         </ul>
-        <p class="glass-info">Glass: ${drink.strGlass}</p>
+        <h3>Glass: <span class="glass-info">${drink.strGlass}</span></h3>
       </div>
     </div>
   `).join('');
