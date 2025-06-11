@@ -40,11 +40,29 @@ h1, h2, h3 {
 
 .page-heading {
   display: flex;
-
+  align-items: center;
+  gap: 32px;
 }
 
-.hr {
-  margin-left: 12px; 
+.center-screen{
+  position: relative;
+  min-height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-heading hr {
+  flex: 1;
+  border: none;
+  border-top: 2px solid var(--border-color);
+  margin: 0;
+}
+
+.outline {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .line hr {
@@ -79,9 +97,8 @@ ul.ingredients li:not(:last-child)::after{
 }
 
 .card {
+  margin: auto;
   width: 360px;
-  margin: 124px auto 0 auto;
-  position: relative;
   color: var(--card-text);
   border-radius: 16px;
   overflow: visible;
@@ -105,14 +122,22 @@ ul.ingredients li:not(:last-child)::after{
  * Feel free to change this!
  */
 
+ .card-next-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px; /* відстань між карткою і кнопкою */
+}
 
+.main-image{
+  position: relative;
+  width: 100%;
+;}
 
 .main-image img {
   width: 100%;
   display: block;
   position: relative;
-  border: 1px solid var(--border-color); 
-  border-radius: 16px;
 
   -webkit-mask-image: url("assets/mask.svg"); 
   -webkit-mask-repeat: no-repeat;
@@ -126,6 +151,36 @@ ul.ingredients li:not(:last-child)::after{
   object-fit: cover;
 }
 
+.next {
+  width: 54px;
+  height: 54px;
+  background: url('assets/arrow_forward_ios.svg') center center no-repeat;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--border-color);
+}
+
+.back {
+  width: 54px;
+  height: 54px;
+  background: url('assets/arrow_back_ios.svg') center center no-repeat;
+  border: 1px solid var(--border-color);
+  background-size: 24px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--border-color);
+}
+
+.back:hover, .next:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 
 .like-button {
   position: absolute;
@@ -133,10 +188,12 @@ ul.ingredients li:not(:last-child)::after{
   right: 0;
   border: 1px solid var(--border-color);
   padding: 14px 14px 10px 14px;
+  background-size: 24px 24px;
   border-radius: 12px;
   cursor: pointer;
   background: transparent;
   transition: all 0.3s ease;
+  z-index: 2;
 }
 
 .like-button .material-symbols-outlined {
