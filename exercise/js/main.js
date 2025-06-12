@@ -1,5 +1,3 @@
-console.log("...fetching a random cocktail 🍹");
-
 let currentIndex = 0;
 let viewedDrinks = [];
 
@@ -129,7 +127,6 @@ function updateLikeButton(drinkId) {
 
 fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
 
-//fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=rum%20punch")
   .then((response) => response.json())
   .then((data) => {
     const drink = data.drinks[0];
