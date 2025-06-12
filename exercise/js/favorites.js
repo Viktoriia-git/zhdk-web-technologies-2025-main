@@ -10,7 +10,7 @@ function displayFavorites() {
   const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
 
   if (favorites.length === 0) {
-    favoritesGrid.innerHTML = '<p>No favorite cocktails yet</p>';
+    favoritesGrid.innerHTML = '<h3>No favorite cocktails yet</h3>';
     return;
   }
 
