@@ -225,18 +225,6 @@ ul.ingredients li:not(:last-child)::after{
   padding: 4px 4px 0 4px;
 }
 
-.favorites-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.favorites-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
 
 button.secondary {
   display: flex;
@@ -250,4 +238,17 @@ button.secondary {
   padding: 16px 24px;
   border-radius: 12px;
   color: var(--card-text);
+}
+
+.favorites-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
 }
