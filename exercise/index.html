@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&family=Pinyon+Script&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Savate:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back_ios,arrow_forward_ios,favorite" />
 
 
 </head>
@@ -23,15 +23,19 @@
   <div class="center-screen">
 
     <div class="card-next-wrapper">
-      <button class="back"></button>
+      <button class="back-button">
+        <span class="material-symbols-outlined">arrow_back_ios</span>
+      </button>
     <div class="card">
 
+    <div class="main-image-container">
     <div data-js="photo" class="main-image">
       <!-- append image later in here -->
-       <button class="like-button">
-        <span class="material-symbols-outlined">favorite</span>
-    </button>
     </div>
+    <button class="like-button">
+      <span class="material-symbols-outlined">favorite</span>
+  </button>
+</div>
 
 
 
@@ -49,7 +53,9 @@
         
     </div>
     </div>
-    <button class="next"></button>
+    <button class="next-button">
+      <span class="material-symbols-outlined">arrow_forward_ios</span>
+    </button>
     </div>
   </div>
 
