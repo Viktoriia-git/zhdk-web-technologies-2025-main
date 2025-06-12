@@ -151,41 +151,33 @@ ul.ingredients li:not(:last-child)::after{
   object-fit: cover;
 }
 
-.next {
-  width: 54px;
-  height: 54px;
-  background: url('assets/arrow_forward_ios.svg') center center no-repeat;
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--border-color);
+.main-image-container {
+  position: relative;
+  width: 100%;
 }
 
-.back {
-  width: 54px;
-  height: 54px;
-  background: url('assets/arrow_back_ios.svg') center center no-repeat;
-  border: 1px solid var(--border-color);
-  background-size: 24px 24px;
-  border-radius: 12px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--border-color);
-}
-
-.back:hover, .next:hover {
-  background: rgba(255, 255, 255, 0.1);
+.main-image{
+  width: 100%;
 }
 
 .like-button {
   position: absolute;
   top: 0;
   right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  padding: 14px 14px 10px 14px;
+  background-size: 24px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.next-button, .back-button {
   border: 1px solid var(--border-color);
   padding: 14px 14px 10px 14px;
   background-size: 24px 24px;
@@ -196,13 +188,37 @@ ul.ingredients li:not(:last-child)::after{
   z-index: 2;
 }
 
-.like-button .material-symbols-outlined {
+
+
+.like-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.next-button:hover{
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.back-button:hover{
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.secondary:hover{
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+.material-symbols-outlined {
   color: var(--card-text);
   transition: all 0.3s ease;
 }
 
 .like-button.liked .material-symbols-outlined {
   color: #fff;
+  font-variation-settings: 'FILL' 1;
+}
+
+.like-button .material-symbols-outlined {
+  font-variation-settings: 'FILL' 0;
 }
 
 .material-symbols-outlined.button{
